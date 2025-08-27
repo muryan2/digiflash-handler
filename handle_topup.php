@@ -40,8 +40,7 @@ if ($isPaymentSuccess) {
     // Pastikan Anda menggunakan API Key yang aman.
 
     $apiUrl = 'https://api.bukaolshop.com/v1/topup'; // Ganti dengan URL API yang benar
-    $apiKey = 'YOUR_API_KEY_HERE'; // Ganti dengan API Key Anda yang sebenarnya
-
+    $apiKey = getenv('API_KEY');
     $data = [
         'user_id' => $userId,
         'amount'  => $amount,
